@@ -14,6 +14,7 @@ Premine: | None: NO ICO, NO Presale, NO Founder's rewards
 FAQ
 --------------
 | | |
+------------|------------
 - Disk space requirements:
   * Blockchain size growth is around `10 MB per day` and around 3.65 GB per year.
 - Network rules:
