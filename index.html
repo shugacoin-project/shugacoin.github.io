@@ -1,168 +1,210 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shugacoin - Open source PoW CPU Blockchain</title>
+	<meta name="description" content="Shugacoin is a cryptocurrency that enables instant payments to anyone in the world and that can be efficiently mined with consumer-grade hardware." />
+	<meta name="keywords" content="shugacoin, shuga, crypto, cryptocurrency, bitcoin, ethereum, monero, btc, eth, miningpoolstats, bitcointalk" />
+	<meta name="author" content="shugacoin"/>
 
-		<!-- OG -->
-		<meta property="og:url" content="https://shugacoin.org" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Shugacoin" />
-		<meta property="og:description" content="Open source PoW CPU Blockchain" />
-		<meta property="og:image" content="https://shugacoin.org/img/logo.png" />
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
-		<!-- Twitter Card -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Shugacoin" />
-		<meta name="twitter:description" content="Open source PoW CPU Blockchain" />
-		<meta name="twitter:site" content="@shugacoin" />
-		<meta name="twitter:creator" content="@shugacoin" />
-		<meta name="twitter:image" content="https://shugacoin.org/img/logo.png" />
+	<!-- Bootstrap & Plugins CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-		<title>Shugacoin - Open source PoW CPU Blockchain</title>
-		<meta name="description" content="Shugacoin is a cryptocurrency that enables instant payments to anyone in the world and that can be efficiently mined with consumer-grade hardware.">
-		<link rel="icon" type="image/png" href="https://shugacoin.org/img/logo.png">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="assets/css/shuga.coin.min.css?v=1.0.0" rel="stylesheet" type="text/css">
+</head>
+<body>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<div class="loading-wrapper">
+		<div class="loading">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
 
-		<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-		<link href='https://fonts.googleapis.com/css?family=Ubuntu Mono' rel='stylesheet'>
+	<!-- ***** Header Area Start ***** -->
+	<header class="header-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 position-relative">
+					<nav class="main-nav">
+						<!-- ***** Logo Start ***** -->
+						<a href="/" class="logo">
+							<img src="assets/images/logos/logo_107x29.png" class="light-logo" alt="Shugacoin Logo"/>
+						</a>
+						<!-- ***** Logo End ***** -->
 
-		<!-- ZERO-MD -->
-		<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
-		<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+						<!-- ***** Menu Start ***** -->
+						<ul class="nav">
+							<li><a href="https://explorer.shugacoin.org/#/">Explorer</a></li>
+							<li><a href="https://wallet.shugacoin.org/#/">Web Wallet</a></li>
+							<li><a href="#exchange">Exchange</a></li>
+							<li><a href="#download">Download</a></li>
+							
+						</ul>
+						<a class='menu-trigger'>
+							<span>Menu</span>
+						</a>
+						<!-- ***** Menu End ***** -->						
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- ***** Header Area End ***** -->
 
-		<style>
-			body, html {
-				font-family: 'Ubuntu';
-				height: 100%;
-				padding: 0;
-				margin: 0;
-			}
-			header {
-				height: 100%;
-				padding: 0;
-				margin: 0;
-				display: -webkit-box;
-				display: -moz-box;
-				display: -ms-flexbox;
-				display: -webkit-flex;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				background-color: #444c82;
-				color: #ffffff;
-			}
-			header h1 {
-				margin: 0;
-			}
-			header .content {
-				width: 100%;
-				display: flex;
-			}
-			header img.logo {
-				max-width: 256px;
-			}
-			header .links a {
-				margin: 0px 5px;
-				display: inline-block;
-			}
-			a {
-				color: #7f97d8;
-				text-decoration: underline;
-				transition: ease-in 0.1s;
-			}
-			a:hover {
-				color: #5877cc;
-			}
-			#specs {
-				padding: 30px 0px;
-			}
-			#specs img {
-				max-width: 100%;
-			}
-			footer {
-				background-color: #191B1C;
-				color: #ffffff;
-				padding: 20px;
-			}
-			code {
-				padding: 2px;
-				margin: 2px;
-				font-family: 'Ubuntu Mono';
-				font-size: 112%;
-				color: #e83e8c;
-			}
-			pre code {
-				padding: 0px;
-				margin: 0px;
-				font-family: 'Ubuntu Mono';
-				font-size: 112%;
-			}
-			a.img-link {
-				text-decoration: none;
-				padding: 5px;
-			}
-			a.img-link:hover {
-				text-decoration: none;
-			}
-			a.img-link img {
-				height: 32px;
-				width: 32px;
-			}
-		</style>
-	</head>
-
-	<body>
-		<header>
-			<div class="content">
-				<div class="text-center container">
-					<h1 class="d-block mb-2">
-						Shugacoin
-					</h1>
-					<h4>
-						one-CPU-one-vote, PoW blockchain
-					</h4>
-					<div id="height" class="d-block mb-2">
-						Current height is <span class="loading">loading...</span> <a href="#" class="current d-none" target="_blank">0</a> (<span class="passed">0</span> blocks since you open this page)
+	<!-- ***** Wellcome Area Start ***** -->
+	<section class="welcome-area bg-bottom-center" id="welcome-1">
+		<div class="header-token text">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-lg-12 align-self-center">
+						<h1>SHUGACOIN</h1>
 					</div>
-					<div class="links mb-2">
-						<a href="https://github.com/shugacoin-project/shugacoin/releases/latest" target="_blank">DOWNLOAD</a>
-						<a href="https://explorer.shugacoin.org/#/" target="_blank">EXPLORER</a>
-						<a href="https://wallet.shugacoin.org/#/" target="_blank">WEB WALLET</a>
+					<div class="offset-lg-3 col-lg-6">
+						<p>one-CPU-one-vote, PoW blockchain</p>
 					</div>
+					<div id="height" class="offset-lg-3 col-lg-6">
+						<p>Current height is <a href="#" class="current">0</a> (<span class="passed">0</span> blocks since you open this page)</p>
+					</div>			
+				</div>
+			</div>
+		</div>
+		<div class="scroll-to">
+			<a href="#what-is-ico">
+				<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+			</a>
+		</div>		
+	</section>
+	<!-- ***** Wellcome Area End ***** -->
 
-					<div class="markets mb-2">
-						<a href="https://t.me/shugacoin" target="_blank" class="img-link">
-						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-						  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-						</svg>
-						</a>
-						<a href="#" target="_blank" class="img-link">
-						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-						  <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-						</svg>
-						</a>
-						<a href="#" target="_blank" class="img-link">
-						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-						  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-						</svg>
-						</a>
-						<a href="#" target="_blank" class="img-link">
-						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
-						  <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927z"/>
-						</svg>
-						</a>
+	<!-- ***** shugachain start ***** -->
+	<section class="section bg-bottom" id="what-is-ico">
+		<div class="container">
+			<!-- ***** Features Items Start ***** -->
+			<div class="row m-bottom-70">
+				<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+					<div class="features-line line" data-scroll-reveal="enter right move 30px over 0.6s after 0.2s">
+						<div class="icon">
+							<i class="fa fa-cube"></i>
+						</div>
+						<h5 class="features-title">Open Source Software</h5>
+						<p>Shugacoin is an open source software project released under the MIT/X11 license which gives you the power to run, modify, and copy the software and to distribute, at your option, modified copies of the software. The software is released in a transparent process that allows for independent verification of binaries and their corresponding source code.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+					<div class="features-line line" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+						<div class="icon">
+							<i class="fa fa-lock"></i>
+						</div>
+						<h5 class="features-title">Wallet Encryption</h5>
+						<p>Wallet encryption allows you to secure your wallet, so that you can view transactions and your account balance, but are required to enter your password before spending SHUGA. This provides protection from wallet-stealing viruses and trojans as well as a sanity check before sending payments.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
+					<div class="features-line">
+						<div class="icon">
+							<i class="fa fa-server"></i>
+						</div>
+						<h5 class="features-title">Mining Reward</h5>
+						<p>Miners are currently awarded with 42.94967296 SHUGA per block, an amount which gets halved roughly every 2 years (every 12,500,000 blocks).</p>
 					</div>
 				</div>
 			</div>
-		</header>
+			<!-- ***** Features Items End ***** -->
 
+			<!-- ***** About Start ***** -->
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 align-self-center">
+					<div class="left-heading">
+						<h2 class="section-title">The fastest PoW blockchain</h2>
+					</div>
+					<div class="left-text">
+					<zero-md no-shadow src="https://raw.githubusercontent.com/shugacoin-project/shugacoin.github.io/main/specifications.md"></zero-md>	
+					</div>					
+				</div>
+			</div>
+			<!-- ***** About End ***** -->
+		</div>
+	</section>
+	<!-- ***** shugachain end ***** -->
+
+	<!-- ***** Download Start ***** -->
+	<section class="section gradient" id="download">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 align-self-center mobile-bottom-fix">
+					<div class="left-heading light">
+						<h2 class="section-title">Download</h2>
+					</div>
+					<div class="left-text light m-bottom-0">
+						<ul>
+							<li><img src="assets/images/icons/icon_win.png" width="18"> <a href="https://github.com/shugacoin-project/shugacoin/releases/latest">Windows</a></li>
+							<li><img src="assets/images/icons/icon_linux.png" width="18"> <a href="https://github.com/shugacoin-project/shugacoin/releases/latest">Linux</a></li>
+							<li><img src="assets/images/icons/icon_osx.png" width="18"> <a href="https://github.com/shugacoin-project/shugacoin/releases/latest">OSX (Apple macOS)</a></li>
+							<li><img src="assets/images/icons/icon_arm.png" width="18"> <a href="https://github.com/shugacoin-project/shugacoin/releases/latest">ARM</a></li>
+							<li><img src="assets/images/icons/icon_android.png" width="18"> <a href="https://github.com/shugacoin-project/shugacoin/releases/latest">Android</a></li>
+							<li><img src="assets/images/icons/icon_source.png" width="18"> <a href="https://github.com/shugacoin-project/shugacoin">Source</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** Download End ***** -->
+
+	<!-- ***** Contact & Footer Start ***** -->
+	<footer id="contact">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-12 col-sm-12">
+						<div class="contact">
+							<p>If you are interested in the Shugacoin project, come to our community.</p>
+							<ul class="social">
+								<li><a href="https://twitter.com/shugacoin"><i class="fa fa-times"></i></a></li>
+								<li><a href="#"><i class="fa fa-btc"></i></a></li>
+								<li><a href="https://github.com/shugacoin-project"><i class="fa fa-github"></i></a></li>
+								<li><a href="https://t.me/shugacoin"><i title="Telegram" class="fa fa-telegram"></i></a></li>
+							</ul>							
+						</div>
+						
+					</div>
+					<p class="copyright">Copyright &copy; 2024 - shugacoin.com</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- ***** Contact & Footer End ***** -->
+
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="assets/js/popper.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- Plugins -->
+	<script src="assets/js/particles.min.js"></script>
+	<script src="assets/js/scrollreveal.min.js"></script>
+	<script src="assets/js/jquery.downCount.js"></script>
+	<script src="assets/js/parallax.min.js"></script>
+
+	<!-- Global Init -->
+	<script src="assets/js/particle-dark.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<!-- ZERO-MD -->
+	<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+	<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>	
+	
 		<script>
 			var height_start = 0
 
@@ -196,5 +238,5 @@
 				}, 4000);
 			})
 		</script>
-	</body>
+</body>
 </html>
