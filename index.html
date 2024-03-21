@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Shugacoin - Open source PoW CPU Blockchain</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shugacoin - Open source PoW CPU Blockchain</title>
 	<meta name="description" content="Shugacoin is a cryptocurrency that enables instant payments to anyone in the world and that can be efficiently mined with consumer-grade hardware." />
 	<meta name="keywords" content="shugacoin, shuga, crypto, cryptocurrency, bitcoin, ethereum, monero, btc, eth, miningpoolstats, bitcointalk" />
-	<meta name="author" content="shugacoin"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="resource/favicon.png" />	
-	<!-- Styles -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
-	<link rel="stylesheet" href="css/icons.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<meta name="author" content="shugacoin"/>	
+    <link rel="icon" type="images/x-icon" href="images/favicon.png" />
+    <!-- remix icon  -->
+    <link rel="stylesheet" href="css/remixicon.css" />
+    <!-- Swiper-slider Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+	<!-- bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SQZ7PDDLLN"></script>
 	<script>
@@ -26,251 +28,292 @@
 	  gtag('config', 'G-SQZ7PDDLLN');
 	</script>		
 </head>
-<body class="lines" id="scrollup">
+<body data-bs-spy="scroll" data-bs-target="#navbarCollapse">
+    <!-- header section start with navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-light"
+            id="navbar">
+            <div class="container">
+                <div class="navbar-brand logo">
+                    <a class="navbar-caption fs-4 text-primary fw-bold" href="/">Shugacoin
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="fw-bold text-dark fs-4"><i
+                            class="ri-menu-5-line"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ms-auto" id="navbar-navlist">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://wallet.shugacoin.org/">Web Wallet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://explorer.shugacoin.org/">Explorer</a>
+                        </li>
+                    </ul>
+                    <div class="nav-btn">
+                        <a href="#download" class="btn btn-light text-primary rounded-2 border">Download</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header part end  -->
+    <!-- hero section start  -->
+    <section class="hero-part bg-img bg-home" id="home">
+        <div class="container">
+            <!-- row start  -->
+            <div
+                class="row position-relative align-items-center justify-content-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="headline mb-4">
+                        <a href="https://wpaper.shugacoin.org/" class="bg-light">
+                           Read our whitepaper
+                            <i class="ri-arrow-right-line"></i>
+                            <span class="ti-angle-right"></span>
+                        </a>
+                    </div>
+                    <div class="hero-text">
+                        <h1 class="display-6 lh-55 text-dark">
+                            <span class="fw-semibold text-primary">Shuga</span>coin
+                        </h1>
+                        <p class="fw-medium mt-3 lh-base text-black">one-CPU-one-vote, PoW blockchain</p>
+                    </div>
+                    <div class="main-btn mt-4">
+                        <a href="https://discord.com/invite/BFJpACPyPH" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-discord"></i></span></a>
+                        <a href="https://twitter.com/shugacoin" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-twitter-x"></i></span></a>
+                        <a href="https://t.me/shugacoin" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-telegram"></i></span></a>
+                        <a href="https://bitcointalk.org/index.php?topic=5487986.0" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-currency-bitcoin"></i></span></a>
+                        <a href="https://github.com/shugacoin-project" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2"></div>
+            </div>
+            <!-- row end  -->
+        </div>
+    </section>
+    <!-- hero section end  -->
+    <!-- brand section start  -->
+    <section class="section brand-part">
+        <div class="container">
+            <!-- row start  -->
+            <div class="row justify-content-center text-center g-4">
+                <div class="col-lg-3 col-5">
+                    <a href="#"><img src="images/logo/cmc.png" alt class="img-fluid" width="200" height="200" title="coinmarketcap"/></a>
+                </div>
+                <div class="col-lg-3 col-5">
+                    <a href="#"><img src="images/logo/coingecko.png" alt class="img-fluid" width="200" height="200" title="coingecko"/></a>
+                </div>
+                <div class="col-lg-3 col-5">
+                    <a href="#"><img src="images/logo/bitstorage.png" alt class="img-fluid" width="200" height="200" title="bitstorage"/></a>
+                </div>	
+                <div class="col-lg-3 col-5">
+                    <a href="#"><img src="images/logo/nomics.png" alt class="img-fluid" width="200" height="200" title="nomics"/></a>
+                </div>					
+            </div>
+            <!-- row end  -->
+        </div>
+    </section>
+    <!-- brand section end  -->
+    <!-- about section start  -->
+    <section class="section about-part-1 bg-light" id="about">
+        <div class="container">
+            <!-- row start  -->
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-5">
+                    <div
+                        class="bg-white p-5 shadow-sm rounded-3 mt-4 position-relative overflow-hidden">
+                        <div class="about-header">
+                            <div class="title-sm">
+                                <h6 class="text-primary">Information Blockchain</h6>
+                            </div>
+                        </div>
+                        <p class="mt-3 lh-base">Shugacoin Block Reward Half Countdown</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row mt-2 g-3">
+					
+                        <div class="col-lg-6">
+                            <div class="icon-text d-flex bg-white p-3 rounded-3">
+                                <div class="ms-3 mt-3">
+                                    <h3><p id="listblocks"><a href="#" class="current">loading...</a></p></h3>
+									<p class="text-dark fs-6 mb-2">Current Height</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="icon-text d-flex bg-white p-3 rounded-3">
+                                <div class="ms-3 mt-3">
+                                    <h3><p id="reward">loading...</p></h3>
+									<p class="text-dark fs-6 mb-2">Reward</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="icon-text d-flex bg-white p-3 rounded-3">
+                                <div class="ms-3 mt-3">
+                                    <h3><p id="netHashrate">loading...</p></h3>
+									<p class="text-dark fs-6 mb-2">Network Hashrate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="icon-text d-flex bg-white p-3 rounded-3">
+                                <div class="ms-3 mt-3">
+                                    <h3><p id="blkleft">loading...</p></h3>
+									<p class="text-dark fs-6 mb-2">Remaining Blocks Left</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="icon-text d-flex bg-white p-3 rounded-3">
+                                <div class="ms-3 mt-3">
+                                    <h3><p id="shugaLeft">loading...</p></h3>
+									<p class="text-dark fs-6 mb-2">Total Shugacoin Left to Mine</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="icon-text d-flex bg-white p-3 rounded-3">
+                                <div class="ms-3 mt-3">
+                                    <h3><p id="hours">loading...</p></h3>
+									<p class="text-dark fs-6 mb-2">Left until halving</p>
+                                </div>
+                            </div>
+                        </div>						
+                    </div>
+                </div>
+            </div>
+            <!-- row end  -->
+        </div>
+    </section>
+    <!-- about section end  -->
+    <!-- feature section start  -->
+    <section class="section feature-part pb-0" id="features">
+        <div class="container">
+            <!-- row start -->
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6">
+                    <div class="feature-img">
+                        <div class="img-phone">
+                            <img src="images/services/services.png" alt
+                                class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-header">
+                        <div class="title-sm">
+                            <h6 class="text-primary">Our Projects</h6>
+                        </div>
+                        <div class="main-title mt-4">
+                            <h2 class="display-6 lh-55 text-dark">
+                                QO<span class="fw-semibold text-primary">FANS</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <p class="fw-medium mt-3">
+                        QoFans a unique content management platform designed to empower creators and connect them with their fans in meaningful ways. At QoFans, 
+						we believe in fostering a supportive and engaging community where creators can thrive and fans can enjoy exclusive content from their favorite personalities.
+						<a href="https://qofans.com/p/about">Learn more....</a>
+                    </p>
+                </div>
+            </div>
+            <!-- row end  -->
+        </div>
+    </section>
+    <!-- feature section end  -->
+    
+    <section class="section guide-app" id="download">
+        <div class="container">
+            <div class="guide-header text-center">
+                <div class="title-sm">
+                    <h6 class="text-primary">Download</h6>
+                </div>
+                <div class="main-title mt-4">
+                    <h2 class="display-6 lh-55 text-dark">
+                        Connect to our wallets
+                    </h2>
+                </div>
+            </div>
+            <div class="guide-content text-start mt-5">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-3">
+                        <h4 class="text-primary mt-4"><strong> 1.</strong> Download</h4>
+                        <p class="my-3">Install Shugacoin Azula in your windows, linux, and macOS</p>
+                        <div class="main-btn mt-4 d-flex">
+                            <a href="https://github.com/shugacoin-project/shugacoin/releases/latest" class="btn btn-primary fs-6 mb-3"><i class="bi bi-windows"></i></a>
+                            <a href="https://github.com/shugacoin-project/shugacoin/releases/latest" class="btn btn-primary fs-6 mb-3"><i class="bi bi-ubuntu"></i></a>
+                            <a href="https://github.com/shugacoin-project/shugacoin/releases/latest" class="btn btn-primary fs-6 mb-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 d-none d-lg-block">
+                        <i class="ri-arrow-right-circle-fill ms-lg-5 fs-2 text-primary"></i>
+                    </div>
+                    <div class="col-lg-3 ms-lg-5 my-4">
+                        <h4 class="text-primary"><strong> 2.</strong> Web Wallets</h4>
+                        <p class="my-3">Our web wallet, no download required</p>
+                        <a href="https://wallet.shugacoin.org/#/" class="text-primary fs-5 fw-semibold mt-4">Learn more</a>
+                        
+                    </div>
+                    <div class="col-lg-1 d-none d-lg-block">
+                        <i class="ri-arrow-right-circle-fill ms-lg-5 fs-2 text-primary"></i>
+                    </div>
+                    <div class="col-lg-3 ms-lg-5">
+                        <h4 class="text-primary"><strong> 3.</strong>Download Mobile</h4>
+                        <p class="my-3">Our Mobile Wallet Android, iOS</p>
+                        <a href="#" class="text-primary fs-5 fw-semibold mt-4">View App</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<img src="resource/bg/p3.png" class="vx" alt="" data-enllax-ratio="-0.1" data-enllax-type="foreground" />
-
-<div class="theme-layout">
-
-	<header class="sticktop">
-		<div class="menusec">
-			<div class="logo"> 
-				<a href="/" title="shugacoin">
-					<img class="hidec" src="resource/logo/logo-a.png" alt="shugacoin" />
-					<img class="showc" src="resource/logo/logo-b.png" alt="shugacoin" />
-				</a>
-			</div>
-			<div class="apps-btns">
-				<a href="https://wallet.shugacoin.org/#/" class="g1" title="">Web Wallet</a>
-				<a href="https://explorer.shugacoin.org/#/" class="g1" title="">Explorer</a>
-				<a class="smooth" href="#download" title="">Download</a>
-			</div>
-			<div class="open-minimal-menu resopen">
-				<div id="hamburger-two">
-				     <span></span>
-				     <span></span>
-				     <span></span>
-				</div>
-			</div>
-			<nav id="navsc">
-				<div class="apps-btns mobilap">
-					<a href="https://wallet.shugacoin.org/#/" class="g1" title="">Web Wallet</a>
-					<a href="https://explorer.shugacoin.org/#/" class="g1" title="">Explorer</a>
-					<a class="smooth" href="#download" class="g2" title="">Download</a>
-				</div>
-			</nav>
-		</div>
-	</header>
-
-	<section>
-		<div class="block remove-top">
-			<div data-velocity="-.1" style="background: url(resource/bg/bakcground.png) repeat scroll 50% 422.28px transparent;" class="parallax no-parallax scrolly-invisible"></div>
-			<div class="container fluid">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="fsec">
-							<div class="finfos wow fadeIn" data-wow-delay="0s">
-								<h3>SHUGACOIN</h3>
-								<p>one-CPU-one-vote, PoW blockchain</p>
-								<div class="social">
-									<a href="https://twitter.com/shugacoin" title=""><i class="fa fa-twitter"></i></a>
-									<a href="https://t.me/shugacoin" title=""><i class="fa fa-telegram"></i></a>
-									<a href="https://bitcointalk.org/index.php?topic=5487986.0" title=""><i class="fa fa-bitcoin"></i></a>
-									<a href="https://github.com/shugacoin-project" title=""><i class="fa fa-github"></i></a>
-								</div>
-							</div>
+    <!-- footer-part start -->
+    <footer class="footer-part section pb-5" id="contacts">
+        <div class="container">
+            <div class="footer-info">
+                <!-- row start -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="logo">
+                            <a class="fs-4 text-light fw-bold" href="#">
+                                Shugacoin
+                            </a>
+                        </div>
+						<div class="main-btn mt-4">
+							<a href="https://discord.com/invite/BFJpACPyPH" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-discord"></i></span></a>
+							<a href="https://twitter.com/shugacoin" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-twitter-x"></i></span></a>
+							<a href="https://t.me/shugacoin" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-telegram"></i></span></a>
+							<a href="https://bitcointalk.org/index.php?topic=5487986.0" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-currency-bitcoin"></i></span></a>
+							<a href="https://github.com/shugacoin-project" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-github"></i></a>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section>
-		<div class="block remove-top">
-			<div class="container fluid expadding">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="countsec">
-							<h3 class=" wow fadeIn" data-wow-delay="0s">Information Blockchain</h3>
-						</div>					
-						<ul class="someblock">
-							<li class="wow fadeIn" data-wow-delay="0s">
-								<span>Current Height</span>
-								<b><p id="listblocks"><a href="#" class="current">loading...</a></p></b>
-							</li>
-							<li class="wow fadeIn" data-wow-delay="0.2s">
-								<span>Reward</span>
-								<b><p id="reward">loading...</p></b>
-							</li>
-							<li class=" wow fadeIn" data-wow-delay="0.4s">
-								<span>Network Hashrate</span>
-								<b><p id="netHashrate">loading...</p></b>
-							</li>
-						</ul>
-						<ul class="someblock">
-							<li class="wow fadeIn" data-wow-delay="0.6s">
-								<span>Remaining Blocks Left</span>
-								<b><p id="blkleft">loading...</p></b>
-							</li>
-							<li class=" wow fadeIn" data-wow-delay="0.8s">
-								<span>Total Shugacoin Left to Mine</span>
-								<b><p id="shugaLeft">loading...</p></b>
-							</li>
-							<li class=" wow fadeIn" data-wow-delay="0.10s">
-								<span>Left until halving</span>
-								<b><p id="hours">loading...</p></b>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="download">
-		<div class="block remove-top less-bottom">
-			<div class="container fluid expadding">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="countsec">
-							<h3 class=" wow fadeIn" data-wow-delay="0s">Download</h3>
-							<p class=" wow fadeIn" data-wow-delay="0.2s">Download Qt Core Wallet Shugacoin.</p>
-							<div class="social wow fadeIn" data-wow-delay="0.8s">
-								<a href="https://github.com/shugacoin-project/shugacoin/releases/latest" title=""><i class="fa fa-windows"></i></a>
-								<a href="https://github.com/shugacoin-project/shugacoin/releases/latest" title=""><i class="fa fa-linux"></i></a>
-								<a href="https://github.com/shugacoin-project/shugacoin/releases/latest" title=""><i class="fa fa-apple"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="three">
-		<div class="block">
-			<div data-velocity="-.1" style="background: url(resource/bg/p3.png) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible"></div><!-- PARALLAX BACKGROUND IMAGE -->	
-			<div class="container fluid">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="roadmapsec">
-							<h3>Road Map</h3>
-							<div class="roadnavsec">
-								<ul class="roadnav">
-							 		<li><span>Q1 2024</span></li>
-							 		<li><span>Q2 2024</span></li>
-									<!--
-							 		<li><span>Q3</span></li>
-							 		<li><span>Q4</span></li>
-							 		<li><span>Q5</span></li>
-							 		<li><span>Q6</span></li>
-							 		<li><span>Q7 </span></li>
-									-->
-							 	</ul>
-							 </div>
-						 	<ul class="roadcontent">
-						 		<li>
-						 			<div class="rmcontent">
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0s"><i class="cl1"></i><h3>Q1</h3><p>Start Built from source code.</p></div><!-- RoadMap -->
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0.2s"><i class="cl2"></i><h3>Q1.1</h3> <p>Built social community</p> </div><!-- RoadMap -->
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0.4s"><i class="cl3"></i><h3>Q1.2</h3> <p>Start Testnet blockchain</p> </div><!-- RoadMap -->
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0.6s"><i class="cl4"></i><h3>Q1.3</h3> <p>Start Mainnet blockchain</p> </div><!-- RoadMap -->
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0.8s"><i class="cl5"></i><h3>Q1.4</h3> <p>Launch on github, twitter/x, telegram , bitcointalk</p> </div><!-- RoadMap -->
-						 			</div>
-						 		</li>
-						 		<li>
-						 			<div class="rmcontent">
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0s"><i class="cl1"></i><h3>Q2</h3><p>launch web wallet</p></div><!-- RoadMap -->
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0.4s"><i class="c12"></i><h3>Q2.2</h3> <p>First Exchange of shugacoin</p> </div><!-- RoadMap -->
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0.2s"><i class="c13"></i><h3>Q2.1</h3> <p>Built mobile apps wallet</p> </div><!-- RoadMap -->
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0.6s"><i class="cl4"></i><h3>Q2.3</h3> <p>TBA</p> </div><!-- RoadMap -->
-							 			<div class="roadmap wow fadeInUp" data-wow-delay="0.8s"><i class="cl5"></i><h3>Q2.4</h3> <p>TBA</p> </div><!-- RoadMap -->
-						 			</div>
-						 		</li>
-						 	</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section id="six">
-		<div class="block">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-7">
-						<div class="faqsec">
-							<h3>Features</h3>
-							<div id="toggle-widget" class="experties">
-								<h2 class="wow fadeInUp" data-wow-delay="0s">Open Source Software</h2>
-								<div class="content">
-									<p>Shugacoin is an open source software project released under the MIT/X11 license which gives you the power to run, modify, and copy the software and to distribute, at your option, modified copies of the software. The software is released in a transparent process that allows for independent verification of binaries and their corresponding source code.</p>
-								</div>
-								<h2 class="wow fadeInUp" data-wow-delay="0.4s">Wallet Encryption</h2>
-								<div class="content">
-									<p>Wallet encryption allows you to secure your wallet, so that you can view transactions and your account balance, but are required to enter your password before spending SHUGA. This provides protection from wallet-stealing viruses and trojans as well as a sanity check before sending payments.</p>
-								</div>
-								<h2 class="wow fadeInUp" data-wow-delay="0.6s">Mining Reward</h2>
-								<div class="content">
-									<p>Miners are currently awarded with 42.94967296 SHUGA per block, an amount which gets halved roughly every 2 years (every 12,500,000 blocks).</p>
-								</div>
-								<h2 class="wow fadeInUp" data-wow-delay="0.6s">Halving interval</h2>
-								<div class="content">
-									<p><b>12,500,000</b> Blocks (approx. 2 years)</p>
-								</div>
-								<h2 class="wow fadeInUp" data-wow-delay="0.6s">Block time</h2>
-								<div class="content">
-									<p><b>5</b> Seconds</p>
-								</div>
-								<h2 class="wow fadeInUp" data-wow-delay="0.6s">PoW algorithm</h2>
-								<div class="content">
-									<p>YespowerShuga (based on Yespower 1.0.1)</p>
-								</div>
-								<h2 class="wow fadeInUp" data-wow-delay="0.6s">Difficulty</h2>
-								<div class="content">
-									<p>ShugaShield-N510 (based on Zcash's modification of Digishield)</p>
-								</div>
-								<h2 class="wow fadeInUp" data-wow-delay="0.6s">Use Port</h2>
-								<div class="content">
-									<p>40001 / RPC 40002</p>
-								</div>								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="seven">
-		<div class="block remove-bottom gray">
-			<div class="bottomline">
-				<div class="scrollup"><a href="#scrollup" title="">Scroll Up</a></div>
-				<span>Copyright &copy; 2024 shugacoin.org All rights reserved. Built with <i class="fa fa-heart"></i></span>
-			</div>
-		</div>
-	</section>
-
-</div>
-
-
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="js/modernizr.js" type="text/javascript"></script>
-<script src="js/script.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/wow.min.js" type="text/javascript"></script>
-<script src="js/slick.min.js" type="text/javascript"></script>
-<script src="js/scrolly.js" type="text/javascript"></script>
-<script src="js/countdown.js" type="text/javascript"></script>
-<script src="js/mouse.js" type="text/javascript"></script>
-<script src="js/3d.js" type="text/javascript"></script>
-<script src="js/enllax.js" type="text/javascript"></script>
-<script src="js/poptrox.js" type="text/javascript"></script>
-<script src="js/scrollnav.js" type="text/javascript"></script>
-<script src="js/scrollup.js" type="text/javascript"></script>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 pt-2">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 pt-2">
+                    </div>
+                </div>
+                <!-- row end -->
+            </div>
+        </div>
+    </footer>
+    <!-- footer-part end -->
+    <div class="footer-copyright py-3">
+        <div class="copy-info text-center text-light">
+            Copyright &copy; <script>
+                document.write(new Date().getFullYear())
+            </script> shugacoin.org All Right Reserved. Built with <i class="bi bi-balloon-heart-fill"></i>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
         <script>
             api = "https://api.shugacoin.org"
 
@@ -378,7 +421,7 @@
                 getAmountShugaLeft()
                 getCurrentPrice()	
             }, 1000)
-        </script>	
+        </script>		
 </body>
-</html>
 
+</html>
