@@ -84,6 +84,7 @@
                             <span class="fw-semibold text-primary">Shuga</span>coin
                         </h1>
                         <p class="fw-medium mt-3 lh-base text-black">one-CPU-one-vote, PoW blockchain</p>
+						<p class="fw-medium mt-3 lh-base text-black" id="priceusd">Loading..</p>
                     </div>
                     <div class="main-btn mt-4">
                         <a href="https://discord.com/invite/BFJpACPyPH" class="btn btn-primary fs-6 mb-3"><span><i class="bi bi-discord"></i></span></a>
@@ -322,7 +323,7 @@
 
             function getPrice() {
                 return Promise.resolve($.ajax({
-                    url: api + "/price",
+                    url: "https://api.bitstorage.finance/v1/public/ticker?pair=SHUGAUSDT",
                     dataType: 'json',
                     type: 'GET',
                 }))
@@ -405,11 +406,8 @@
 
             function getCurrentPrice() {
                 getPrice().then(function(data) {
-                    priceUSD = parseFloat(data.result.usd)
-                    getpriceBTC = data.result.btc
-                    priceBTC = Number(getpriceBTC).toLocaleString(undefined, {minimumFractionDigits: 8, maximumFractionDigits: 8})
-                    $("#priceusd").text("$" + priceUSD)
-                    $("#pricebtc").text(priceBTC + "BTC")
+                    priceUSD = parseFloat(data.data.last)
+                    $("#priceusd").text("Last Price: $" + priceUSD)
 
                 })
             }
